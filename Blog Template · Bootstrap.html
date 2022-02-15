@@ -14,18 +14,72 @@
         10 JS Exercises
     --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style>
-        /*
-            EX1) Write a selector to target the h1 in jumbotron
-            EX2) Write a selector to target every children of the navbar
-            EX3) Write a selector to target the "continue reading..." inside the jumbotron
-            EX4) Write a selector to target the first blogpost
-            EX5) Write a selector to target the "even" links in the navbar
-            EX6) Write a selector to target the last blog post
-            EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
-            EX8) Write a selector to target the second post author
-            EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
-            EX10) Write a selector to target the footer
-        */
+
+            /*EX1) Write a selector to target the h1 in jumbotron*/
+ 
+             .jumbotron> div> h1 {
+                   color: aqua;
+             }
+
+            /*EX2) Write a selector to target every children of the navbar*/
+                    
+                   .nav-scroller>.nav>.p-2 {
+                        font-weight: bold;
+                        color: rgb(26, 161, 161) !important;
+                    }
+            /*EX3) Write a selector to target the "continue reading..." inside the jumbotron*/
+
+                .jumbotron>div>h1:last-child> .lead{
+                    border: 1px solid black;
+                }
+
+            /*EX4) Write a selector to target the first blogpost*/ 
+
+            .blog-post-title:first-child {
+                   font-weight: bold;
+                   background-color: aqua;
+                   border: 1px solid black;
+                   border-radius: 5px;
+            }
+                     
+           /* EX5) Write a selector to target the "even" links in the navbar*/
+
+                 .nav-scroller>.nav>.p-2:nth-child(2n) {
+                     font-style: italic;
+
+                 }
+            /*EX6) Write a selector to target the last blog post*/
+
+            .blog-post-title:last-child {
+                   font-weight: bold;
+                   background-color: plum;
+                   border: 1px solid black;
+                   border-radius: 5px;
+            }
+
+            /*EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )*/
+
+            .p-4 > ol li:first-child{
+                font-size: large;
+                font-weight: bold;
+            }
+
+            /*EX8) Write a selector to target the second post author*/
+            .blog-post-meta>a:nth-child(2) {
+                font-size: large;
+            }
+
+            /*EX9) Write a selector to target the "back to top" link*/
+            
+            .blog-footer>p:last-child> a {
+                font-size: large;
+                font-weight: bold;
+                color: purple;
+                border: 1px solid black;
+            }
+            /*#### EXTRA Try doing it without targeting the footer element directly
+            EX10) Write a selector to target the footer*/
+            
     </style>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
